@@ -7,6 +7,10 @@ body {
    justify-content: center;
    width: 100vw;
    height: 100vh;
+   padding: 3rem;
+
+   font-family: 'Helvettica', sans-serif;
+   color: #FFF;
 }
 
 .background-container {
@@ -31,7 +35,65 @@ body {
 
 main {
     width: 60%;
-    /* border: 2px solid red; */
-    
-    
+    border: 2px solid;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+main .side-column {
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+        rgba(53, 5, 55, 0.6), 
+        rgba(53, 5, 55, 0.6)
+        ),
+        url("./assets/form-background-img.jpg");
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 3rem 2rem 3rem;
+}
+
+.side-column .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.title span {
+    display: block;
+    font-size: 3.5rem;
+}
+
+.side-column .register-label {
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #5995DA;
+    color: #FFF;
+}
+
+button:hover {
+    background-color: #76AEED;
+}
+
+main .form-container {
+    background-color: #FFF;
+}
+
+
