@@ -1,7 +1,7 @@
 # Gym Registration Form
 
 ## 🌐 Live Demo  
-[View Live](#)  
+[View Live](https://abdulkarimmziya.github.io/form_validation/)  
 
 ## 🚀 Features  
 - Responsive two-column layout with a blurred background image  
