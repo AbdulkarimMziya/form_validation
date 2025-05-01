@@ -21,7 +21,53 @@
             </div>
         </div>
 
-        <div class="form-container"> Form</div>
+        <div class="form-container">
+            <p class="title">Register</p>
+            <p>Already have an account? <a href="#">Login here instead.</a></p>
+
+            <form id="registrationForm" novalidate>
+
+                <p class="form-row">
+                    <label for="first_name">First Name</label>
+                    <input 
+                        type="text"
+                        id="first_name"
+                    />
+                    <span class="error"></span>
+                </p>
+
+                <p class="form-row">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email"
+                        id="email"
+                    />
+                    <span class="error"></span>
+                </p>
+
+                <p class="form-row">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password"
+                        id="password"
+                    />
+                    <span class="error"></span>
+                </p>
+
+                <p class="form-row">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input 
+                        type="password"
+                        id="confirmPassword"
+                    />
+                    <span class="error"></span>
+                </p>
+
+                <p class="form-row">
+                    <button type="submit">Register</button>
+                </p>
+            </form>
+        </div>
     </main>
 </body>
 </html>

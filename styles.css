@@ -41,6 +41,15 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
+main .side-column,
+main .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 3rem 2rem 3rem;
+}
+
 main .side-column {
     background-size: cover;
     background-image: 
@@ -50,16 +59,9 @@ main .side-column {
         ),
         url("./assets/form-background-img.jpg");
     background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-around;
-    gap: 1rem;
-    padding: 3rem 2rem 3rem;
 }
 
-.side-column .title {
+.title {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
@@ -79,7 +81,9 @@ main .side-column {
     gap: 1rem;
 }
 
-.social-media button {
+.social-media button,
+.form-row button
+ {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
@@ -94,6 +98,51 @@ button:hover {
 
 main .form-container {
     background-color: #FFF;
+    color: #000;
 }
 
+.form-container .title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+}
+.form-row {
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+form .form-row:last-of-type {
+    margin-top: 2rem;
+}
+
+input {
+    appearance: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 90%;
+    width: 100%;
+    padding: 4px;
+} 
+
+input.invalid {
+    border-bottom: 2px solid #900;
+}
+
+.error {
+    width: 100%;
+    font-size: 80%;
+    color: #FFF;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    padding: 0 4px;
+}
 
