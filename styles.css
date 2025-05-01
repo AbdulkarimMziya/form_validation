@@ -136,16 +136,23 @@ input {
     padding: 4px;
 } 
 
-input.invalid {
+input:focus {
+    border-bottom: 2px solid #5995DA;
+}
+
+input:invalid {
     border-bottom: 2px solid #900;
+    background-color: #fdd;
 }
 
 .error {
     width: 100%;
     font-size: 80%;
-    color: #FFF;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
+    color: #900;
     padding: 0 4px;
+}
+
+.error.active {
+    padding: 0.3em;
 }
 
