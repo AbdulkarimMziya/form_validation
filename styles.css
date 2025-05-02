@@ -14,63 +14,54 @@ body {
    visibility: hidden;
 }
 
+/* ===============================
+   Background Layer
+================================= */
 .background-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    background-image: 
-        linear-gradient(
-            rgba(136, 21, 143, 0.6), 
-            rgba(136, 21, 143, 0.6)
-            ),
-        url("./assets/background-img.jpg");
-    background-size: cover;
-    background-position: center;
-
+    background: 
+        linear-gradient(rgba(136, 21, 143, 0.6), rgba(136, 21, 143, 0.6)),
+        url("./assets/background-img.jpg") center/cover;
     filter: blur(4px);
     z-index: -1;
 }
 
+/* ===============================
+   Main Layout
+================================= */
 main {
     width: 60%;
-    border: 2px solid;
-    border-radius: 5px;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 2px solid;
+    border-radius: 5px;
 }
 
-main .side-column,
-main .form-container {
+/* ===============================
+   Side Column
+================================= */
+.side-column {
+    background: 
+        linear-gradient(rgba(53, 5, 55, 0.6), rgba(53, 5, 55, 0.6)),
+        url("./assets/form-background-img.jpg") center/cover;
+    border-radius: 5px 0 0 5px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1rem;
-    padding: 3rem 2rem 3rem;
+    padding: 3rem 2rem;
 }
 
-main .side-column {
-    background-size: cover;
-    background-image: 
-    linear-gradient(
-        rgba(53, 5, 55, 0.6), 
-        rgba(53, 5, 55, 0.6)
-        ),
-        url("./assets/form-background-img.jpg");
-    background-position: center;
-
-    border-radius: 5px 0 0 5px;
-}
-
-.title {
+.side-column .title {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.title span {
+.side-column .title span {
     display: block;
     font-size: 3.5rem;
 }
@@ -80,29 +71,40 @@ main .side-column {
     margin-top: 3rem;
 }
 
+/* ===============================
+   Social Media Buttons
+================================= */
 .social-media {
     display: flex;
     gap: 1rem;
 }
 
 .social-media button,
-.form-row button
- {
+.form-row button {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     background-color: #5995DA;
     color: #FFF;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
     background-color: #76AEED;
 }
 
-main .form-container {
+/* ===============================
+   Form Container
+================================= */
+.form-container {
     background-color: #FFF;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 3rem 2rem;
 }
 
 .form-container .title {
@@ -113,20 +115,22 @@ main .form-container {
 form {
     width: 100%;
 }
-.form-row {
-    margin-bottom: 15px;
 
+.form-row {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 4px;
+    margin-bottom: 15px;
 }
 
 form .form-row:last-of-type {
     margin-top: 2rem;
 }
 
+/* ===============================
+   Input Fields
+================================= */
 input {
     appearance: none;
     outline: none;
@@ -135,17 +139,21 @@ input {
     font-size: 90%;
     width: 100%;
     padding: 4px;
-} 
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
 
 input:focus {
-    border-bottom: 2px solid #5995DA;
+    border-bottom-color: #5995DA;
 }
 
 input:invalid {
-    border-bottom: 2px solid #900;
+    border-bottom-color: #900;
     background-color: #fdd;
 }
 
+/* ===============================
+   Error Messages
+================================= */
 .error {
     width: 100%;
     font-size: 80%;
